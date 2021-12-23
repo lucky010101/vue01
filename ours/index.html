@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="./css/a.css">
+		</head>
+<body>
+		<div>
+			<div>进制转换</div>
+			<div id="app">
+				<input type="text" id="" name="" value="" v-model="inputNumber"/><br />
+				<input type="button" @click="A1()" name="" id="" value="计算二进制转十进制" /><br />
+				<br />
+				<input type="button" @click="A2()" name="" id="" value="计算二进制转八进制" /><br />
+				<br />
+				<input type="button" @click="A3()" name="" id="" value="计算二进制转十六进制" /><br />
+				<br />
+				<input type="button" @click="A4()" name="" id="" value="计算八进制转二进制" /><br />
+				<br />
+				<input type="button" @click="A5()" name="" id="" value="计算八进制转十进制" /><br />
+				<br />
+				<input type="button" @click="A6()" name="" id="" value="计算八进制转十六进制" /><br />
+				<br />
+				<input type="button" @click="A7()" name="" id="" value="计算十进制转二进制" /><br />
+				<br />
+				<input type="button" @click="A8()" name="" id="" value="计算十进制转八进制" /><br />
+				<br />
+				<input type="button" @click="A9()" name="" id="" value="计算十进制转十六进制" /><br />
+				<br />
+				<input type="button" @click="A10()" name="" id="" value="计算十六进制转二进制" /><br />
+				<br />
+				<input type="button" @click="A11()" name="" id="" value="计算十六进制转八进制" /><br />
+				<br />
+				<input type="button" @click="A12()" name="" id="" value="计算十六进制转十进制" /><br />
+				<br />
+					
+			<script type="text/javascript">
+						let v = new Vue({
+							el:"#app",
+							data:{
+								inputNumber:0,
+								outputNumber:0
+							},
+							methods:{
+								
+								
+								A1(){
+									v.outputNumber = parseInt(v.inputNumber,2);
+									alert("转换结果为："+v.outputNumber);
+								},
+								A2(){
+									v.outputNumber = parseInt(v.inputNumber,2).toString(8);
+									alert("转换结果为："+v.outputNumber)
+								},
+								A3(){
+									v.outputNumber = parseInt(v.inputNumber,2).toString(16);
+									alert("转换结果为："+v.outputNumber)
+								},
+								A4(){
+									v.outputNumber = parseInt(v.inputNumber,8).toString(2);
+									alert("转换结果为："+v.outputNumber)
+								},
+								A5(){
+									v.outputNumber = parseInt(v.inputNumber,8).toString(10);
+									alert("转换结果为："+v.outputNumber)
+								},
+								A6(){
+									v.outputNumber = parseInt(v.inputNumber,8).toString(16);
+									alert("转换结果为："+v.outputNumber)
+								},
+								A7(){
+									v.outputNumber = parseInt(v.inputNumber,10).toString(2);
+									alert("转换结果为："+v.outputNumber)
+								},
+								A8(){
+									v.outputNumber = parseInt(v.inputNumber,10).toString(8);
+									alert("转换结果为："+v.outputNumber)
+								},
+								A9(){
+									v.outputNumber = parseInt(v.inputNumber,10).toString(16);
+									alert("转换结果为："+v.outputNumber)
+								},
+								A10(){
+									v.outputNumber = parseInt(v.inputNumber,16).toString(2);
+									alert("转换结果为："+v.outputNumber)
+								},
+								A11(){
+									v.outputNumber = parseInt(v.inputNumber,16).toString(8);
+									alert("转换结果为："+v.outputNumber)
+								},
+								A12(){
+									v.outputNumber = parseInt(v.inputNumber,16).toString(10);
+									alert("转换结果为："+v.outputNumber)
+								}
+							}
+						})
+					</script>
+		</div>
+	</body>
+</html>
